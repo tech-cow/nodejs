@@ -23,7 +23,9 @@ Person.prototype.yell = function() {
 };
 
 /**************** Test ****************/
-person.greet();
+/* Testing module export from greeting folder*/
+greet.english()
+greet.spanish()
 
 var yu = new Person('Yu','Zhou');
 yu.yell()
