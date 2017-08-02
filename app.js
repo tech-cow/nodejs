@@ -1,7 +1,30 @@
-// similar to #include from c++
-// able to include module
+/** Requiring Moduel **/
+var greet = require('./greet');
 
-//Greet now has access to all of the
-//function in greet.js
+/** Object Literal **/
+var person = {
+    firstname: 'John',
+    lastname: 'Doe',
+    greet: function(){
+      console.log('hello, ' + this.firstname + ' ' + this.lastname);
+    }
+}
 
-var greet = require('./greet.js');
+class Person {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+}
+
+/** Prototype extends class function **/
+Person.prototype.yell = function() {
+  console.log('WOW! ' + this.firstname + ' ' + this.lastname);
+};
+
+/**************** Test ****************/
+person.greet();
+
+var yu = new Person('Yu','Zhou');
+yu.yell()
+console.log(yu.__proto__);
